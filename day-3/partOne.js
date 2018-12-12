@@ -31,7 +31,7 @@ for (let i = 0; i < canvasSize; i += 1) {
 
 const clashes = [];
 
-data.map(providedInput => {
+data.forEach(providedInput => {
   const { id, leftOffset, topOffset, columns, rows } = resolveDetails(
     providedInput
   );
@@ -47,7 +47,7 @@ data.map(providedInput => {
 
   // Loop over the height of the current addition plus top offset
   for (let i = topOffset; i < heightWithOffset; i += 1) {
-    horizontalSlice.map((entry, idx) => {
+    horizontalSlice.forEach((entry, idx) => {
       // Skip if value to be added is a 0
       if (entry === 0) {
         return;

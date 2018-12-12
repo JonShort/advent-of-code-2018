@@ -34,7 +34,7 @@ for (let i = 0; i < canvasSize; i += 1) {
   canvas.push(new Array(canvasSize).fill(0));
 }
 
-data.map(providedInput => {
+data.forEach(providedInput => {
   const { id, leftOffset, topOffset, columns, rows } = resolveDetails(
     providedInput
   );
